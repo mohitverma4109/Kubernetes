@@ -19,4 +19,12 @@ spec:
         - name: cont3
           image: nginx
           ports:
-            -  containerPort: 80 
+          - containerPort: 80
+          volumeMounts:
+          -  mountPath: var/www/html
+             name: my-volume
+      volumes:
+          - name: my-volume
+            persistentVolumeClaim:
+              claimName: my-pvc
+
