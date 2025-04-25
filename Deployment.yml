@@ -6,7 +6,7 @@ metadata:
   labels: 
     app: myapp
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels: 
       app: myapp
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: cont3
-          image: nginx
+          image: mohitverma4109/notes-k8s-project
           ports:
           - containerPort: 80
           volumeMounts:
