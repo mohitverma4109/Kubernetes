@@ -1,6 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
+<<<<<<< HEAD
   name: notes-svc
   namespace: dev
   labels:
@@ -13,3 +14,18 @@ spec:
       port: 8000
       targetPort: 8000
   type: ClusterIP   
+=======
+  name: my-statefulset-svc
+  namespace: dev
+  labels: 
+    app: mysql-state
+spec:
+  clusterIP: None
+  selector:
+    app: mysql-state
+  ports:
+  - name: mysql
+    protocol: TCP
+    port: 3306
+    targetPort: 3306
+>>>>>>> c379b38 (k8s)
